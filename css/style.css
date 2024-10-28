@@ -1,0 +1,63 @@
+/*
+CSS RESETS:
+ Border box reset:
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ 62.5% Fix: https: //www.aleksandrhovhannisyan.com/blog/62-5-percent-font-size-trick/
+*/
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+ }
+ 
+ 
+ *,
+ *:before,
+ *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+ }
+ 
+ 
+ html,
+ body {
+    height: 100%;
+    background: rgb(30, 76, 107);
+ }
+ 
+ 
+ body {
+     font-size: 1.6rem;
+    /* font-size 1.6rem is now the same as 16px */
+    line-height: 1.6;
+ }
+
+ main {
+    justify-content: center;
+ }
+
+ h1, .bio {
+    color: #f2f5f0;
+ }
+
+.project-section {
+    background: rgb(30, 76, 107);
+    max-width: 75vw; /* width 75% of viewport width */
+    margin: 0 auto; /* centers project-section on page */
+    justify-content: center; /* centers columns */
+    display: grid; /* content of project-section will be in grid */
+    grid-template-columns: repeat(2, 300px); /* 2 cols of 200px width */
+    grid-auto-rows: 200px; /* rows will be 200px in height */
+    column-gap: 100px;
+    row-gap: 100px;
+    padding: 30px;
+    /* gap: 50px; */
+}
+
+.project-item {
+    background: antiquewhite;
+    padding: 10px;
+
+}
