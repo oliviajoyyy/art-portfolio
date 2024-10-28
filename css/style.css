@@ -11,7 +11,6 @@ html {
     font-size: 62.5%;
  }
  
- 
  *,
  *:before,
  *:after {
@@ -20,44 +19,101 @@ html {
     padding: 0;
  }
  
- 
  html,
  body {
     height: 100%;
-    background: rgb(30, 76, 107);
  }
- 
  
  body {
      font-size: 1.6rem;
     /* font-size 1.6rem is now the same as 16px */
     line-height: 1.6;
+    background: rgb(30, 76, 107);
+    font-family: "Amethysta", serif;
  }
 
  main {
     justify-content: center;
  }
 
- h1, .bio {
+header{
+    background-color: rgb(7, 34, 58);
     color: #f2f5f0;
+    margin-top: 0;
+    padding: 10px;
  }
 
+h1 {
+    font-family: "Cinzel", serif;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+.bio {
+    color: #f2f5f0;
+    max-width: 90vw;
+    margin: 20px auto; 
+    padding: 5px;
+    z-index: 4;
+ }
+
+ p {
+    font-size: 1.8rem;
+ }
+
+#three-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -3;
+}
+
 .project-section {
-    background: rgb(30, 76, 107);
+    /* background: rgb(30, 76, 107); */
     max-width: 75vw; /* width 75% of viewport width */
     margin: 0 auto; /* centers project-section on page */
     justify-content: center; /* centers columns */
     display: grid; /* content of project-section will be in grid */
-    grid-template-columns: repeat(2, 300px); /* 2 cols of 200px width */
-    grid-auto-rows: 200px; /* rows will be 200px in height */
+    grid-template-columns: repeat(2, 400px); /* 2 cols of 200px width */
+    grid-auto-rows: 250px; /* rows will be 200px in height */
     column-gap: 100px;
     row-gap: 100px;
     padding: 30px;
+    z-index: 1;
     /* gap: 50px; */
 }
 
 .project-item {
-    background: antiquewhite;
+    background: rgba(250, 235, 215, 0.326);
+    color: #f2f5f0;
     padding: 10px;
+    z-index: 3;
+}
 
+footer a {
+    color:#a0c4de;
+}
+
+footer a:hover {
+    color: rgba(250, 235, 215);
+    text-decoration: none;
+}
+
+footer {
+    background-color: rgb(7, 34, 58);
+    color: #f2f5f0;
+    padding: 10px;
+}
+
+@media screen and (max-width:1000px) {
+    .project-section {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .project-item {
+        flex: 0 1 250px;
+    }
 }
