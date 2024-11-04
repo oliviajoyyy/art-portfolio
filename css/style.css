@@ -1,49 +1,247 @@
 /*
-CSS RESETS:
- Border box reset:
-https://www.paulirish.com/2012/box-sizing-border-box-ftw/
- 62.5% Fix: https: //www.aleksandrhovhannisyan.com/blog/62-5-percent-font-size-trick/
-*/
+    COLOR PALLETE
 
+    Ivory       #e3e6e0, #f2f5f0
+    Black       #252930
+    Khaki       #c0b3a0
+    Blue Gray   #6b8490, #475f73
+*/
 
 html {
     box-sizing: border-box;
-    font-size: 62.5%;
- }
+    font-size: 62.5%; /* set default to 10px */
+}
  
- 
- *,
- *:before,
- *:after {
+*, *:before, *:after {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
- }
- 
- 
- html,
- body {
-    height: 100%;
-    background: rgb(30, 76, 107);
- }
- 
- 
- body {
-     font-size: 1.6rem;
-    /* font-size 1.6rem is now the same as 16px */
-    line-height: 1.6;
- }
+}
 
- main {
-    justify-content: center;
- }
+html,
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: "Amethysta", serif;
+    color: #252930;
+    background: #e3e6e0;
+}
 
- h1, .bio {
+h1, h2, h3 {
+    font-family: "Cinzel", serif;
+    font-weight: 400; /* make default font weight */
+    margin: 0; /* remove all margins */
+    letter-spacing: 0.05em;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 2.3rem;
+}
+
+p {
+    font-family: "Amethysta", serif;
+    font-size: 1.8rem; /* equivalent to 15px */
+    margin: 20px 0;
+    line-height: 1.4;
+}
+
+header {
     color: #f2f5f0;
- }
+}
+
+/* ------------------------------------------------ */
+
+/* ---------------- NAV BAR ----------------------- */
+
+nav {
+    background-color: #475f73;/*rgb(231, 231, 222);*/
+    /* color: white; */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    z-index: 2;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* puts on the right side */
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #f2f5f0;
+}
+
+nav a:hover {
+    background-color: #607d95;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999; /* always puts navbar on top of other elements */
+    background-color: #475f7370; /* rgba(255, 255, 255, 0.117); */
+    backdrop-filter: blur(10px); /* gives a glass effect when background color has transparency */
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    align-items: flex-start; /* starts from the top */
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+    /* color: #8b929f; */
+}
+
+/* .sidebar a:hover {
+    background-color: #475f73;
+} */
+
+.menu-icon {
+    display: none;
+}
+
+/* nav bar items not shown on mobile size screens, show menu icon */
+@media(max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+}
+
+/* nav bars fills entire mobile screen when < 400px*/
+@media(max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+/* ------------------------------------------------ */
+
+
+/* ------------- THREE.JS AT THE TOP -------------- */
+
+.portfolio header canvas {
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
+
+#scene-container {
+    /* background-color: black; */
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 375px;
+    margin: 0 auto;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.content {
+    display: flex;
+    gap: 5em;
+    width: 100%;
+    padding-top: 3em;
+    position: relative;
+}
+
+.content:before {
+    content: '';
+    position: absolute;
+    top: 0; /* in relation to parent container content */
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid white;
+    transform: scaleX(1);
+}
+
+.container h1 {
+    width: 50vw;
+    font-size: 4rem;
+    font-family: "Cinzel", serif;
+    font-weight: 400; /* make default font weight */
+    line-height: 97%;
+    text-align: center;
+}
+
+.container h1, .container p {
+    flex-basis: 0; /* 50% 2-colum layout */
+    flex-grow: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* hides everything */
+    /* only what is visible shows up - will be animated to show more */
+}
+
+.container p {
+    width: 40vw;
+    line-height: 2;
+    text-align: left;
+    margin: 0;
+}
+
+/* ------------------------------------------------ */
+
+/* -------------- PORTFOLIO LAYOUT ---------------- */
+
+.portfolio .content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio main {
+    flex: 1 0 auto;
+    color: #252930;
+    /* position: relative; */
+    /* width: 100vw;
+    height: 100vh; */
+    /* top: 375px; */
+}
 
 .project-section {
-    background: rgb(30, 76, 107);
+    /* background: rgb(30, 76, 107); */
     max-width: 75vw; /* width 75% of viewport width */
     margin: 0 auto; /* centers project-section on page */
     justify-content: center; /* centers columns */
@@ -57,7 +255,58 @@ html {
 }
 
 .project-item {
-    background: antiquewhite;
+    /* background: antiquewhite; */
     padding: 10px;
+    border: 1px solid black;
 
+}
+
+/* ------------------------------------------------ */
+
+/* --------------- ABOUT / BIO PAGE --------------- */
+
+.about {
+    /* background: url(../images/bg-home-office-city.jpg) no-repeat; */
+    /* background-size: cover; */
+    display: flex;
+    flex-direction: column;
+    /* z-index: 99; */
+}
+
+.about header {
+    color: #252930;
+}
+
+.about .content-wrapper {
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 900px;
+    flex: 1 0 auto;
+    z-index: 1;
+}
+
+.about .content-bg {
+    background: #e3e6e0e6;
+    padding: 30px;
+}
+
+#bg {
+    width: 100vw;
+    height: 100vh;
+}
+
+.about canvas {
+    position: absolute;
+    /* top: 50px;
+    left: 0; */
+    /* z-index: -1; */
+}
+
+@media screen and (max-width:650px) {
+    .about .content-wrapper {
+        padding: 10px;
+    }
+    .content-bg {
+        padding: 20px;
+    }
 }

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Olivia Joy Cacdac</title>
+
+    <!-- description of 100-150 characters -->
+    <meta name="description"
+        content="about Olivia Joy, undergraduate student at San Jose State University, computer science major, digital media art minor">
+    <meta name="keywords" content="Olivia Joy, artist, digital media, programmer, computer science">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amethysta&family=Cinzel:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- use an import map to link to the Three.js CDN -->
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@0.162.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.162.0/examples/jsm/"
+          }
+        }
+    </script>
+</head>
+
+<body class="about">
+    <!-- THREE canvas -->
+    <canvas id="bg"></canvas>
+    <nav>
+        <ul class="sidebar">
+          <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                viewBox="0 -960 960 960" width="24px" fill="#f2f5f0">
+                <path
+                  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+              </svg></a></li>
+          <li><a href="index.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Resume</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+  
+        <ul>
+          <li><a href="#">[icon here]</a></li>
+          <li class="hideOnMobile"><a href="index.html">Portfolio</a></li>
+          <li class="hideOnMobile"><a href="about.html">About</a></li>
+          <li class="hideOnMobile"><a href="#">Resume</a></li>
+          <li class="hideOnMobile"><a href="#">Contact</a></li>
+          <li class="menu-icon" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                viewBox="0 -960 960 960" width="24px" fill="#f2f5f0">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+              </svg></a></li>
+        </ul>
+      </nav>
+      <script>
+        function showSidebar() {
+          const sidebar = document.querySelector('.sidebar'); // gets the sidebar
+          sidebar.style.display = "flex";
+        }
+  
+        function hideSidebar() {
+          const sidebar = document.querySelector('.sidebar'); // gets the sidebar
+          sidebar.style.display = "none";
+        }
+      </script>
+
+    <!-- //  INTRO  // -->
+    <div class="content-wrapper">
+
+        <div class="content-bg">
+            <header>
+                <!-- Start content edits below this line. -->
+                <h1>Olivia Joy Cacdac</h1>
+                <h2>Student at San Jose State University</h2>
+
+                <!-- End content edits here. -->
+            </header>
+
+            <!-- //  ABOUT ME  // -->
+            <main>
+                <!-- Start content edits below this line. -->
+                <p>I am an undergraduate student at San Jose State University majoring in Computer Science, with a minor
+                    in
+                    Digital Media Art.</p>
+                <p>To learn more about my work history, check out my <a href="#"> resume</a>. Thanks for
+                    stopping by!
+                </p>
+
+                <!-- End content edits here. -->
+            </main>
+        </div>
+    </div>
+
+    <!-- Link to your Javascript file as a type="module", this will execute the file after the HTML is loaded -->
+    <script type="module" src="js/about.js"></script>
+
+</body>
+
+</html>

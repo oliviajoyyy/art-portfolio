@@ -2,54 +2,109 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art Portfolio | Olivia Joy Cacdac</title>
-    <meta name="description" content=""> <!-- description of 100-150 characters -->
-    <meta name="keywords" content=""> <!-- comma separated key words: Olivia Joy, artist, digital media, programmer, ... -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Portfolio | Olivia Joy Cacdac</title>
 
-    <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="art portfolio Olivia Joy, works from digitial media art courses at San Jose State University"> <!-- description of 100-150 characters -->
+  <meta name="keywords" content="Olivia Joy, artist, digital media, programmer, computer science">
 
-    <!-- use an import map to link to the Three.js CDN -->
-    <script type="importmap">
-        {
-          "imports": {
-            "three": "https://unpkg.com/three@0.162.0/build/three.module.js",
-            "three/addons/": "https://unpkg.com/three@0.162.0/examples/jsm/"
-          }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amethysta&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- use an import map to link to the Three.js CDN -->
+  <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.162.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.162.0/examples/jsm/"
         }
-    </script>
+      }
+  </script>
 
-    <!-- Link to your Javascript file as a type="module", this will execute the file after the HTML is loaded -->
-    <script type="module" src="js/main.js"></script>
 </head>
 
-<body>
-    <div class="content-wrapper">
 
-    <header>
-        <h1>Olivia Joy Cacdac</h1>
+<body class="portfolio">
+
+  <!-- THREE canvas -->
+  <!-- <canvas id="bg"></canvas> -->
+
+  <div class="content-wrapper">
+
+    <nav>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+              viewBox="0 -960 960 960" width="24px" fill="#f2f5f0">
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg></a></li>
+        <li><a href="index.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Resume</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="#">[icon here]</a></li>
+        <li class="hideOnMobile"><a href="index.html">Portfolio</a></li>
+        <li class="hideOnMobile"><a href="about.html">About</a></li>
+        <li class="hideOnMobile"><a href="#">Resume</a></li>
+        <li class="hideOnMobile"><a href="#">Contact</a></li>
+        <li class="menu-icon" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+              viewBox="0 -960 960 960" width="24px" fill="#f2f5f0">
+              <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg></a></li>
+      </ul>
+    </nav>
+    <script>
+      function showSidebar() {
+        const sidebar = document.querySelector('.sidebar'); // gets the sidebar
+        sidebar.style.display = "flex";
+      }
+
+      function hideSidebar() {
+        const sidebar = document.querySelector('.sidebar'); // gets the sidebar
+        sidebar.style.display = "none";
+      }
+    </script>
+
+    <header id="scene-container">
+      <div class="container">
+        <div class="content">
+          <h1>Olivia Joy</h1>
+          <p>Journey into the next dimension with this crazy particle effect</p>
+        </div>
+      </div>
     </header>
 
     <main>
-        <section class="bio">bio, artist statement</section>
-
-        <section class="project-section">
-            <div class="project-item">project 1</div>
-            <div class="project-item">project 2</div>
-            <div class="project-item">project 3</div>
-            <div class="project-item">project 4</div>
-            <div class="project-item">project 5</div>
-            <div class="project-item">project 6</div>
-            <div class="project-item">project 7</div>
-        </section>
+      <section class="project-section">
+        <div class="project-item">[project 1 placeholder]</div>
+        <div class="project-item">[project 2 placeholder]</div>
+        <div class="project-item">[project 3 placeholder]</div>
+        <div class="project-item">[project 4 placeholder]</div>
+        <div class="project-item">[project 5 placeholder]</div>
+        <div class="project-item">[project 6 placeholder]</div>
+        <div class="project-item">[project 7 placeholder]</div>
+      </section>
     </main>
 
-    </div> <!-- end content wrapper div -->
+  </div>
 
-    <footer>
 
-    </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CSSRulePlugin.min.js"
+    integrity="sha512-IxxYrSNXnt/RJlxNX40+7BQL88FLqvdpVpuV9AuvpNH/NFP0L8xA8WLxWTXx6PYExB5R/ktQisp6tIrnLn8xvw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Link to your Javascript file as a type="module", this will execute the file after the HTML is loaded -->
+  <script type="module" src="js/main.js"></script>
 
 </body>
 
