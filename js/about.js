@@ -8,38 +8,20 @@ import { OrbitControls } from 'https://unpkg.com/three@0.162.0/examples/jsm/cont
 
 let scene, camera, renderer;
 let torus, particlesMesh;
-let sceneContainer = document.querySelector("#scene-container");
-
-// ------------ Animation for showing name at the top ------------
-const border = CSSRulePlugin.getRule('.content:before');
-const h1 = document.querySelector('h1');
-const p = document.querySelector('p');
-const tl = gsap.timeline();
-
-tl.from(border, { delay: 0.5, duration: 4, cssRule: { scaleX: 0 } });
-tl.to(h1, { duration: 2, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', y: '30px' }, "-=3");
-tl.to(p, { duration: 4, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', y: '30px' }, "-=2");
-// ---------------------------------------------------------------
-
 
 function init() {
     scene = new THREE.Scene();
 
     // camera
-    // camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera = new THREE.PerspectiveCamera(75, sceneContainer.clientWidth / sceneContainer.clientHeight, 0.1, 1000);
+    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     camera.position.z = 2;
 
     // renderer
-    // renderer = new THREE.WebGLRenderer({
-    //     canvas: document.querySelector('#bg'), // entire scene inside the canvas and want to render the canvas
-    // })
+    renderer = new THREE.WebGLRenderer({
+        canvas: document.querySelector('#bg'), // entire scene inside the canvas and want to render the canvas
+    })
 
-    // renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer = new THREE.WebGLRenderer({ antialias: true });
-    // set size to the size of the div
-    renderer.setSize(sceneContainer.clientWidth, sceneContainer.clientHeight);
-    sceneContainer.appendChild(renderer.domElement); // append to specific element
+    renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setClearColor(new THREE.Color('#21282a'), 1);
 
     // add-ons
@@ -133,12 +115,9 @@ function animate() {
 }
 
 function onWindowResize() {
-    camera.aspect = sceneContainer.clientWidth / sceneContainer.clientHeight;
+    camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(sceneContainer.clientWidth, sceneContainer.clientHeight);
-    // camera.aspect = window.innerWidth / window.innerHeight;
-    // camera.updateProjectionMatrix();
-    // renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
 window.addEventListener('resize', onWindowResize, false);
