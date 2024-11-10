@@ -4,14 +4,14 @@
 
 //~~~~~~~Import Three.js (also linked to as import map in HTML)~~~~~~
 import * as THREE from 'three';
-import { OrbitControls } from 'https://unpkg.com/three@0.162.0/examples/jsm/controls/OrbitControls.js';
+// import { OrbitControls } from 'https://unpkg.com/three@0.162.0/examples/jsm/controls/OrbitControls.js';
 
 let scene, camera, renderer;
 let torus, particlesMesh;
 let sceneContainer = document.querySelector("#scene-container");
 
 // ------------ Animation for showing name at the top ------------
-const border = CSSRulePlugin.getRule('.content:before');
+const border = CSSRulePlugin.getRule('.portfolio .content:before');
 const h1 = document.querySelector('h1');
 const p = document.querySelector('p');
 const tl = gsap.timeline();
@@ -43,10 +43,10 @@ function init() {
     renderer.setClearColor(new THREE.Color('#21282a'), 1);
 
     // add-ons
-    const controls = new OrbitControls(camera, renderer.domElement);
+    // const controls = new OrbitControls(camera, renderer.domElement);
 
     // torus geometry
-    const geometry = new THREE.TorusKnotGeometry(2, 0.5, 500, 40, 9, 3); //new THREE.TorusGeometry(.7, .2, 16, 100);
+    const geometry = new THREE.TorusKnotGeometry(2, 0.5, 500, 40, 9, 3); //new THREE.TorusGeometry(.7, .2, 16, 100); 
     const texture = new THREE.TextureLoader().load('textures/checker.jpg');
     const material = new THREE.PointsMaterial({
         size: 0.005,
@@ -82,7 +82,7 @@ function init() {
     scene.add(particlesMesh);
 }
 
-document.addEventListener('mousemove', animateParticles);
+//document.addEventListener('mousemove', animateParticles);
 
 let mouseX = 0;
 let mouseY = 0;

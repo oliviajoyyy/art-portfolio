@@ -34,6 +34,7 @@
 
   <!-- THREE canvas -->
   <!-- <canvas id="bg"></canvas> -->
+  <!-- <canvas id="main-scene"></canvas> -->
 
   <div class="content-wrapper">
 
@@ -83,7 +84,9 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-scene">
+      <!-- <canvas id="main-scene"></canvas> -->
+
       <section class="project-section">
 
         <div class="project-item">
@@ -145,7 +148,8 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- Link to your Javascript file as a type="module", this will execute the file after the HTML is loaded -->
-  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/main.js"></script> <!-- three.js in header -->
+  <script type="module" src="js/main-2.js"></script> <!-- three.js in main -->
 
 </body>
 

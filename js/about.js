@@ -4,7 +4,7 @@
 
 //~~~~~~~Import Three.js (also linked to as import map in HTML)~~~~~~
 import * as THREE from 'three';
-import { OrbitControls } from 'https://unpkg.com/three@0.162.0/examples/jsm/controls/OrbitControls.js';
+// import { OrbitControls } from 'https://unpkg.com/three@0.162.0/examples/jsm/controls/OrbitControls.js';
 
 let scene, camera, renderer;
 let torus, particlesMesh;
@@ -25,7 +25,7 @@ function init() {
     renderer.setClearColor(new THREE.Color('#21282a'), 1);
 
     // add-ons
-    const controls = new OrbitControls(camera, renderer.domElement);
+    // const controls = new OrbitControls(camera, renderer.domElement);
 
     // torus geometry
     const geometry = new THREE.TorusKnotGeometry(2, 0.5, 500, 40, 9, 3); //new THREE.TorusGeometry(.7, .2, 16, 100);
