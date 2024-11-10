@@ -407,11 +407,11 @@ nav li:first-child {
 }
 
 /* links */
-a {
+.resume main a {
     color: #6b8490;
 }
 
-a:hover {
+.resume main a:hover {
     color: #c0b3a0;
     text-decoration: none;
 }
