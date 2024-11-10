@@ -51,7 +51,7 @@ h3 {
 
 p {
     font-family: "Amethysta", serif;
-    font-size: 1.8rem; /* equivalent to 15px */
+    font-size: 1.8rem; /* equivalent to 18px */
     margin: 20px 0;
     line-height: 1.4;
 }
@@ -99,6 +99,11 @@ nav a:hover {
 
 nav li:first-child {
     margin-right: auto;
+}
+
+.activeNav {
+    text-decoration: underline #f2f5f0;
+    text-underline-offset: 4px;
 }
 
 .sidebar {
@@ -174,7 +179,7 @@ nav li:first-child {
     margin: 0 auto;
 }
 
-.container {
+.portfolio .container {
     position: relative;
     z-index: 1;
     width: 100%;
@@ -183,7 +188,7 @@ nav li:first-child {
     place-content: center;
 }
 
-.content {
+.portfolio .content {
     display: flex;
     gap: 5em;
     width: 100%;
@@ -191,7 +196,7 @@ nav li:first-child {
     position: relative;
 }
 
-.content:before {
+.portfolio .content:before {
     content: '';
     position: absolute;
     top: 0; /* in relation to parent container content */
@@ -201,7 +206,7 @@ nav li:first-child {
     transform: scaleX(1);
 }
 
-.container h1 {
+.portfolio .container h1 {
     width: 50vw;
     font-size: 4rem;
     font-family: "Cinzel", serif;
@@ -210,14 +215,14 @@ nav li:first-child {
     text-align: center;
 }
 
-.container h1, .container p {
+.portfolio .container h1, .portfolio .container p {
     flex-basis: 0; /* 50% 2-colum layout */
     flex-grow: 1;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* hides everything */
     /* only what is visible shows up - will be animated to show more */
 }
 
-.container p {
+.portfolio .container p {
     width: 40vw;
     line-height: 2;
     text-align: left;
@@ -242,7 +247,7 @@ nav li:first-child {
     /* top: 375px; */
 }
 
-.project-section {
+.portfolio .project-section {
     /* background: rgb(30, 76, 107); */
     max-width: 75vw; /* width 75% of viewport width */
     margin: 0 auto; /* centers project-section on page */
@@ -256,19 +261,19 @@ nav li:first-child {
     /* gap: 50px; */
 }
 
-.project-item {
+.portfolio .project-item {
     /* background: antiquewhite; */
     padding: 10px;
     border: 15px ridge black;
 
 }
 
-.project-item img {
+.portfolio .project-item img {
     width: 100%;
 }
 
 @media screen and (max-width: 870px) {
-    .project-section {
+    .portfolio .project-section {
         /* background: rgb(30, 76, 107); */
         /*max-width: 75vw; /* width 75% of viewport width */
         margin: 0 auto; /* centers project-section on page */
@@ -329,7 +334,190 @@ nav li:first-child {
     .about .content-wrapper {
         padding: 10px;
     }
-    .content-bg {
+    .about .content-bg {
         padding: 20px;
     }
 }
+
+/* RESUME
+------------------------------------*/
+
+.resume header::before {
+    background: url(../images/resume-img/bg-home-office-city.jpg) center;
+    background-size: cover;
+    content: '';
+    display: block;
+    height: 375px;
+}
+
+.resume header {
+    color: #252930;
+}
+
+.resume .btn {
+    background:#6b8490;
+    color: #f2f5f0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 7px;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    border-radius: 4px;
+}
+
+.resume .content-wrapper {
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 900px;
+}
+
+.resume-section {
+    margin-bottom: 50px;
+}
+
+.resume-section h2 {
+    border-bottom: 2px dashed #6b8490;
+}
+
+.resume .download-link {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    font-size: 1.6rem;
+}
+
+/* links */
+a {
+    color: #6b8490;
+}
+
+a:hover {
+    color: #c0b3a0;
+    text-decoration: none;
+}
+
+.resume main a, .resume main li {
+    font-family: "Amethysta", serif;
+    font-size: 1.8rem; /* equivalent to 18px */
+    line-height: 1.4;
+}
+
+.resume main li {
+    margin-left: 30px;
+}
+
+.resume .project-item li:first-child {
+    padding-top: 15px;
+}
+.resume .project-item li:last-child {
+    padding-bottom: 15px;
+}
+
+/* will be applied to any screen 1200px or smaller */
+@media screen and (max-width:1200px) {
+    .resume .download-link {
+        position: absolute;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .resume header::before {
+        height: 200px;
+    }
+    .resume h1 {
+        font-size: 3rem;
+    }
+    .resume h2 {
+        font-size: 2.3rem;
+    }
+    .resume h3 {
+        font-size: 2rem;
+    }
+}
+
+/* Projects
+------------------------------------*/
+.resume .project-item {
+    /* display: flow-root; */
+    margin: 30px 0; /* 30px for top/bottom, 0px for left/right */
+}
+
+.resume .project-item img {
+    width: 300px;
+    /*float: left;
+    margin-right: 20px; */
+}
+
+.resume .project-item ul, .resume .project-item .btn {
+    clear: both; /* return to normal flow */
+}
+
+@media screen and (min-width:860px) { /* any styles here will be applied at 860px for larger */
+    .resume .project-item {
+        display: flow-root;
+        /* margin: 30px 0; */
+    }
+    .resume .project-item img {
+        /* width: 300px; */
+        float: left; /* for text to flow around the image */
+        margin-right: 20px;
+    }
+}
+
+/* max-width to apply to screens that are smaller than 860px, which is where float was removed */
+/* styles will only be applied when viewport is 650px to max of 859px */
+/* one column, two columns, then floated styles */
+@media screen and (min-width:650px) and (max-width:859px) {
+    .resume .project-wrapper { /* using this class as the grid container */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* two cols of equal width */
+        column-gap: 20px;
+    }
+    .resume .project-item img {
+        width: 100%; /* image to flex to size of columns, which are relative to view port */
+    }
+}
+
+@media screen and (max-width:650px) {
+    .resume .project-item img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Work Experience
+------------------------------------*/
+.work-item {
+    /* display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 20px; */
+    margin: 30px 0;
+}
+
+.work-details p {
+    margin: 0;
+}
+
+/* adds grid styles to viewports that are larger than 860px */
+@media screen and (min-width:860px) {
+    .work-item {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        column-gap: 20px;
+    }
+    .work-summary p:first-child {
+        margin-top: 0;
+    }
+}
+
+/* Education
+------------------------------------*/
+.education-item {
+    margin: 30px 0;
+}
+.educaton-item p {
+    margin: 0;
+}
+

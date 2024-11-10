@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume | Olivia Joy Cacdac | Student at SJSU</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amethysta&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="resume">
+  <nav>
+    <ul class="sidebar">
+      <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+            viewBox="0 -960 960 960" width="24px" fill="#f2f5f0">
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+          </svg></a></li>
+      <li><a href="index.html">Portfolio</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <ul>
+      <li></li>
+      <li class="hideOnMobile"><a href="index.html">Portfolio</a></li>
+      <li class="hideOnMobile"><a href="about.html">About</a></li>
+      <li class="hideOnMobile activeNav"><a href="resume.html">Resume</a></li>
+      <li class="hideOnMobile"><a href="#">Contact</a></li>
+      <li class="menu-icon" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+            viewBox="0 -960 960 960" width="24px" fill="#f2f5f0">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+          </svg></a></li>
+    </ul>
+  </nav>
+  <script>
+    function showSidebar() {
+      const sidebar = document.querySelector('.sidebar'); // gets the sidebar
+      sidebar.style.display = "flex";
+    }
+
+    function hideSidebar() {
+      const sidebar = document.querySelector('.sidebar'); // gets the sidebar
+      sidebar.style.display = "none";
+    }
+  </script>
+
+  <a class="btn download-link" href="assets/cs-resume-art109.pdf">Download PDF</a>
+
+  <!-- //  INTRO  // -->
+  <header>
+    <div class="content-wrapper">
+      <h1>Olivia Joy Cacdac</h1>
+      <h2>Student at San Jose State University</h2>
+    </div>
+  </header>
+
+  <main class="content-wrapper">
+    <!-- //  PROFILE  // -->
+    <section class="resume-section">
+      <h2>Profile</h2>
+      <p>As a computer science student, I am interested in full-stack development for web and desktop
+        applications.
+        I am proficient in several programming languages including Java, C++, C, and I have project experience working
+        with SQL and NoSQL databases.</p>
+      <a href="index.html">Back to homepage</a>
+    </section>
+
+    <!-- //  PROJECTS  // -->
+    <section class="resume-section">
+      <h2>Projects</h2>
+
+      <div class="project-wrapper">
+        
+      <section class="project-item">
+        <img src="images/resume-img/dev-mate.png" alt="dev mate application start screen">
+        <h3>DevMate</h3>
+        <p>Contributed to various phases of the software development cycle in a team of 3 to develop a Java desktop
+          application
+          which assists developers in documenting bugs and enhancements for their own projects.</p>
+        <ul>
+          <li>Collaborated in a team of three with clear and effective communication, resulting in successful project
+            outcomes.</li>
+          <li>Developed back-end logic for the saving and editing features in the application, ensuring persisted
+            information in an SQLite database.</li>
+          <li>Implemented the singleton design pattern for database connection.</li>
+          <li>Designed an interactive and user-friendly interface using JavaFX and SceneBuilder for front-end
+            development.</li>
+        </ul>
+        <!-- link to project -->
+        <!-- <a class="btn" href="#" target="_blank">Link to Project</a> -->
+      </section>
+      
+
+      <section class="project-item">
+        <img src="images/resume-img/instructor-report-view.png" alt="sql lite database view creation">
+        <h3>Designing a Database</h3>
+        <p>Designed and implemented a MySQL database to improve data organization, for use in a full-stack web
+          application.</p>
+        <ul>
+          <li>Collaborated in a team of three using strong communication to participate in all aspects of the database
+            life cycle, while quickly adapting to meet new deadlines.</li>
+          <li>Performed normalization on tables and SQL queries to join tables into views for the web application.</li>
+          <li>Composed a formal and detailed report on the project.</li>
+        </ul>
+        <!-- link to project -->
+        <!-- <a class="btn" href="#" target="_blank">Link to Project</a> -->
+      </section>
+
+      </div>
+      <!-- End content edits here. -->
+    </section>
+
+    <!-- //  WORK EXPERIENCE  // -->
+    <section class="resume-section">
+      <h2>Work Experience</h2>
+      <section class="work-item">
+        <div class="work-details">
+          <h3>Software Developer</h3>
+          <p>Contracted by Digital Media Artists Jonathon Keats and Steve Durie</p>
+          <p>June 2024 - Present</p>
+        </div>
+
+        <div class="work-summary">
+          <p>Full-stack development for The Future Democracies Laboratory, which is a prototyping software for
+            different governmental systems,
+            using JavaScript, Node.js, Chart.js, p5.js and MongoDB.</p>
+          <p>Key contributions:</p>
+          <ul>
+            <li>Refactored code to implement a model-view-controller (MVC) design pattern.</li>
+            <li>Implemented a MongoDB database using Node.js running over SSL to save persisted user data.</li>
+            <li>Implemented new features and a new user interface for the application according to design mockups.</li>
+            <li>Integrated hardware controls into the software.</li>
+            <li>Data analysis and visualization into 4 different histograms which are automatically updated as new data
+              is added.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="work-item">
+        <div class="work-details">
+          <h3>Instructional Student Assistant (Grader)</h3>
+          <p>San Jose State University</p>
+          <p>Jan 2023 - May 2023</p>
+        </div>
+
+        <div class="work-summary">
+          <p>Job summary:</p>
+          <ul>
+            <li>Graded 9 Data Structures & Algorithms (CS 146) homework assignments in a timely manner for 30+
+              undergraduate students over the course of a semester.</li>
+            <li>Analyzed and tested Java programs written by students.</li>
+            <li>Provided positive and constructive feedback on student work to encourage learning and to support their
+              understanding of the material.</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+
+    <!-- //  EDUCATION & CERTIFICATIONS  // -->
+    <section class="resume-section">
+      <h2>Education</h2>
+
+      <section class="education-item">
+        <h3>San Jose State University - San Jose</h3>
+        <p>B.S. Computer Science, 2025<br>Minor in Digital Media Art</p>
+        <p>Relevant Coursework:</p>
+        <ul>
+          <li>Java Programming</li>
+          <li>Object-Oriented Design</li>
+          <li>Data Structures & Algorithms</li>
+          <li>Server-side Web Programming</li>
+          <li>Introduction to Database Management Systems</li>
+        </ul>
+      </section>
+
+    </section>
+  </main>
+
+  <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
+
+  <!-- <footer>
+    <p>© 2023 by Olivia Joy Cacdac | <a href="mailto:email@example.com">oliviajoymcacdac@gmail.com</a></p>
+
+    <ul class="socials">
+      <li>
+        <a href="#" target="_blank"><img src="images/icon-logo-twitter.png" alt="My Twitter page"></a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/olivia-joy-cacdac/" target="_blank"><img
+            src="images/icon-logo-linkedin.png" alt="My LinkedIn page"></a>
+      </li>
+      <li>
+        <a href="#" target="_blank"><img src="images/icon-logo-facebook.png" alt="My Facebook page"></a>
+      </li>
+      <li>
+        <a href="#" target="_blank"><img src="images/icon-logo-youtube.png" alt="My YouTube page"></a>
+      </li>
+      <li>
+        <a href="#" target="_blank"><img src="images/icon-logo-instagram.png" alt="My Instagram page"></a>
+      </li>
+    </ul>
+  </footer> -->
+
+</body>
+
+</html>
