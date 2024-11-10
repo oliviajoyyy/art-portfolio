@@ -10,6 +10,7 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%; /* set default to 10px */
+    overflow-x: hidden;
 }
  
 *, *:before, *:after {
@@ -21,6 +22,7 @@ html {
 html,
 body {
     height: 100vh;
+    width: 100vw;
     margin: 0;
     font-family: "Amethysta", serif;
     color: #252930;
@@ -133,7 +135,7 @@ nav li:first-child {
     display: none;
 }
 
-/* nav bar items not shown on mobile size screens, show menu icon */
+/* nav bar items not shown on smaller and mobile size screens, show menu icon */
 @media(max-width: 800px) {
     .hideOnMobile {
         display: none;
@@ -246,8 +248,8 @@ nav li:first-child {
     margin: 0 auto; /* centers project-section on page */
     justify-content: center; /* centers columns */
     display: grid; /* content of project-section will be in grid */
-    grid-template-columns: repeat(2, 300px); /* 2 cols of 200px width */
-    grid-auto-rows: 200px; /* rows will be 200px in height */
+    grid-template-columns: repeat(2, 40%); /* 2 cols of 300px width */
+    grid-auto-rows: auto; /* rows will be 200px in height */
     column-gap: 100px;
     row-gap: 100px;
     padding: 30px;
@@ -257,7 +259,28 @@ nav li:first-child {
 .project-item {
     /* background: antiquewhite; */
     padding: 10px;
-    border: 1px solid black;
+    border: 15px ridge black;
+
+}
+
+.project-item img {
+    width: 100%;
+}
+
+@media screen and (max-width: 870px) {
+    .project-section {
+        /* background: rgb(30, 76, 107); */
+        /*max-width: 75vw; /* width 75% of viewport width */
+        margin: 0 auto; /* centers project-section on page */
+        /*justify-content: center; /* centers columns */
+        display: grid; /* content of project-section will be in grid */
+        grid-template-columns: repeat(1, 90%); /* 2 cols of 200px width */
+        grid-auto-rows: auto; /* rows will be 200px in height */
+        column-gap: 100px;
+        row-gap: 100px;
+        padding: 30px;
+        /* gap: 50px; */
+    }
 
 }
 
