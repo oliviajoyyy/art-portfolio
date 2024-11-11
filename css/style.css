@@ -280,13 +280,13 @@ nav li:first-child {
 }
 
 .portfolio .project-item {
-    /* background: antiquewhite; */
+    background: #e3e6e0;
     padding: 10px;
     border: 15px ridge black;
 
 }
 
-.portfolio .project-item img {
+.portfolio .project-item img, .project-images img {
     width: 100%;
 }
 
@@ -359,6 +359,43 @@ nav li:first-child {
 
 /* ------------------------------------------------ */
 
+.project-page h2 {
+    border-bottom: 2px dashed #6b8490;
+    margin-bottom: 15px;
+}
+
+.project-page iframe {
+    width: 100%;
+    height: 720px;
+}
+
+#sine-animation-iframe {
+    width: 100%;
+    height: 480px;
+}
+
+#treasure-haunt-iframe {
+    margin-left: -30px;
+    width: 910px;
+    height: 620px;
+}
+
+.project-grid-img {
+    position: relative;
+    z-index: 1;
+    /* background: rgb(30, 76, 107); */
+    max-width: 75vw; /* width 75% of viewport width */
+    margin: 0 auto; /* centers project-section on page */
+    justify-content: center; /* centers columns */
+    display: grid; /* content of project-section will be in grid */
+    grid-template-columns: repeat(2, 50%); /* 2 cols of 300px width */
+    grid-auto-rows: auto; /* rows will be 200px in height */
+    column-gap: 50px;
+    row-gap: 50px;
+    padding: 15px;
+    /* gap: 50px; */
+}
+
 /* --------------- RESUME --------------- */
 .resume header::before {
     background: url(../images/resume-img/bg-home-office-city.jpg) center;
@@ -385,7 +422,7 @@ nav li:first-child {
     border-radius: 4px;
 }
 
-.resume .content-wrapper {
+.resume .content-wrapper, .content-wrapper-main {
     margin: 0 auto;
     padding: 30px;
     max-width: 900px;
@@ -407,11 +444,11 @@ nav li:first-child {
 }
 
 /* links */
-.resume main a {
+.resume main a, .project-page main a {
     color: #6b8490;
 }
 
-.resume main a:hover {
+.resume main a:hover, .project-page main a:hover {
     color: #c0b3a0;
     text-decoration: none;
 }

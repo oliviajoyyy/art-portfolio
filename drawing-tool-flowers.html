@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithmic Brushes | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amethysta&family=Cinzel:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="project-page">
+
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#f2f5f0">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></a></li>
+            <li><a href="index.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <ul>
+            <li></li>
+            <li class="hideOnMobile"><a href="index.html">Portfolio</a></li>
+            <li class="hideOnMobile"><a href="about.html">About</a></li>
+            <li class="hideOnMobile"><a href="resume.html">Resume</a></li>
+            <li class="hideOnMobile"><a href="#">Contact</a></li>
+            <li class="menu-icon" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="24px" viewBox="0 -960 960 960" width="24px" fill="#f2f5f0">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></a></li>
+        </ul>
+    </nav>
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar'); // gets the sidebar
+            sidebar.style.display = "flex";
+        }
+
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar'); // gets the sidebar
+            sidebar.style.display = "none";
+        }
+    </script>
+
+    <main class="content-wrapper-main">
+        <section class="project-details">
+            <h2>Algorithmic Brushes</h2>
+            <h3>p5.js (2024)</h3>
+            <h3>Art 101 SJSU </h3>
+        </section>
+
+        <section class="project-documentation">
+            <p>
+                <a href="https://oliviajoyyy.github.io/art-101/p5_code/project1_oc-final/index.html" target="_blank">
+                    View original project page</a>
+            </p>
+            <div class="project-images">
+                <img src="images/p5-drawing-tool-flowers/p1-12tile.png" alt="">
+            </div>
+            <p>
+                <a href="https://oliviajoyyy.github.io/art-101/p5_code/project1_oc-final/sketch.js">See sketch.js code</a>
+            </p>
+        </section>
+
+        <section class="artist-statment">
+            <p>
+                In this project, I created 5 drawing tools: ocPetals, ocSpikes, ocSpots, ocStitch, and ocDiamonds. 
+                I approached this assignment with the idea of wanting randomness in my algorithmic brushes while still giving control to the artist.
+                I incorporated randomness into my brushes by creating them so that shapes are drawn at varying locations surrounding the mouse position
+                and having variation in the shades of fill color.
+                <br><br>
+                What I found successful about this project is being able to give the user more ways to use the 5 brushes through change of color and size.
+                I did this by allowing the color of each brush to be switched between greyscale and a red/maroon shade with a toggle key. 
+                I also allow the user to increase and decrease the size of the ocSpots, ocDiamonds, and eraser tools. 
+                What I like most about my color scheme is how the gold accent contrasts with the red and gives the drawings a pop of color.
+                What I feel could be improved is adding another toggle key to switch to a different color, such as green or blue, 
+                so that the user can have more color options. 
+                <br><br>
+                I have made a detailed and intricate art style with my brushes and my 12 drawings because of the thin stroke borders for the shapes.
+                The subject matter that my drawing tool seems to be good for is flowers, especially because of the tool that creates lotus-like petals.
+                The ocSpikes and ocSpots tools also seem to be good for drawing flower-like subjects because of the petal-like shapes that can be created with them.
+                The ocDiamonds tool seems to be good for creating a geometric background for the subject, especially when the brush is increased to a large size. 
+                <br><br>            
+            </p>
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>

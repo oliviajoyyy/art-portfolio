@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Game | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amethysta&family=Cinzel:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="project-page">
+
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#f2f5f0">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></a></li>
+            <li><a href="index.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <ul>
+            <li></li>
+            <li class="hideOnMobile"><a href="index.html">Portfolio</a></li>
+            <li class="hideOnMobile"><a href="about.html">About</a></li>
+            <li class="hideOnMobile"><a href="resume.html">Resume</a></li>
+            <li class="hideOnMobile"><a href="#">Contact</a></li>
+            <li class="menu-icon" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="24px" viewBox="0 -960 960 960" width="24px" fill="#f2f5f0">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></a></li>
+        </ul>
+    </nav>
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar'); // gets the sidebar
+            sidebar.style.display = "flex";
+        }
+
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar'); // gets the sidebar
+            sidebar.style.display = "none";
+        }
+    </script>
+
+    <main class="content-wrapper-main">
+        <section class="project-details">
+            <h2>Pomodoro Game</h2>
+            <h3>Interface Mashup (2024)</h3>
+            <h3>Art 101 SJSU </h3>
+        </section>
+
+        <section class="project-documentation">
+            <p>
+                <a href="https://oliviajoyyy.github.io/art-101/p5_code/project4_oc-final/index.html" target="_blank">
+                    View original project page</a>
+            </p>
+            <div class="project-images">
+                <img src="images/p5-alien-pomodoro/pomodoro-timer-scene.png" alt="">
+                <img src="images/p5-alien-pomodoro/pomodoro-game-scene.png" alt="">
+            </div>
+            <p>
+            <a href="https://oliviajoyyy.github.io/art-101/p5_code/project4_oc-final/sketch.js">See sketch.js code</a><br>
+                <a href="https://oliviajoyyy.github.io/art-101/p5_code/project4_oc-final/scenes.js">See scenes.js code</a><br>
+                <a href="https://oliviajoyyy.github.io/art-101/p5_code/project4_oc-final/alien.js">See alien.js code</a>
+        </p>
+            </section>
+
+        <section class="artist-statment">
+            <p>
+                This was my final project for my Art 101 course.
+                In this project, I combined game software with a productivity software for a timer based on the Pomodoro technique.
+                The Pomodoro technique is 25 minutes of work followed by a 5 minute break.
+                This 30 minute set is called a 'pomodoro' and a longer break should be taken after 4 pomodoros.
+                <br><br>
+                The p5.js libraries I used in my project are
+                <a href="https://github.com/mveteanu/p5.SceneManager">p5.scenemanager</a>,
+                <a href="https://p5js.org/reference/#/libraries/p5.sound">p5.sound</a>,
+                and <a href="https://github.com/L05/p5.touchgui">p5.toughgui</a>.
+                <br><br>
+                During the 25 minute study scene, the interface shows a countdown of the minutes and involves a simulation interface context.
+                The simulation is of an alien character building a space ship to represent how the user is working hard on their own task
+                for 25 minutes. This alien scene plays throughout a minute and repeats every minute for the whole 25 minutes.
+                In addition, motivational messages will show up for 10 seconds, every minute starting at 35 seconds to encourage users to
+                work on their tasks. There is also background sound of light rain that plays throughout the study scene, as a calming way
+                to help the user stay focused.
+                <br><br>
+                The game software is introduced after the 25 minutes of work and study time is over.
+                The scene switches automatically when the timer reaches 00:00.
+                In the game scene, users have the ability to move the alien character using the joystick controller on the screen.
+                Users can also click 'b'
+                or 'B' to shoot laser beams at the cow, allowing them to score points. There is feedback sound that plays every time the
+                user shoots a laser, and a different feedback sound plays when the user scores a point. Theatricfication is included in 
+                in the game by having the alien character tilt in the direction that the user moves it in,
+                and by having the laser beam also move in the direction the alien was moving in.
+                <br><br>
+                After the 5 minute game scene ends, the program moves back to the study scene and a counter of the pomodoros is incremented.
+                After 4 pomodoros, the user is shown the "end" scene where they may take a longer break on their own, and can
+                click a button to start from the beginning again.
+                More details of the interface for my project include short sound effects that play each time a button is clicked.
+                I included this to indicate to the user that their interaction with the software was successful.
+                In addition, every scene has a 'Help' button that navigates to the About/Help scene where the user can choose to go
+                back to the previous page or go back to the 'Home' beginning screen. The study and game scene are paused while on the help screen.
+            </p>
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>

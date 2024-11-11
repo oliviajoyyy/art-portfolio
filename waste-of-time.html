@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste of Time? | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amethysta&family=Cinzel:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="project-page">
+
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#f2f5f0">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></a></li>
+            <li><a href="index.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <ul>
+            <li></li>
+            <li class="hideOnMobile"><a href="index.html">Portfolio</a></li>
+            <li class="hideOnMobile"><a href="about.html">About</a></li>
+            <li class="hideOnMobile"><a href="resume.html">Resume</a></li>
+            <li class="hideOnMobile"><a href="#">Contact</a></li>
+            <li class="menu-icon" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="24px" viewBox="0 -960 960 960" width="24px" fill="#f2f5f0">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></a></li>
+        </ul>
+    </nav>
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar'); // gets the sidebar
+            sidebar.style.display = "flex";
+        }
+
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar'); // gets the sidebar
+            sidebar.style.display = "none";
+        }
+    </script>
+
+    <main class="content-wrapper-main">
+        <section class="project-details">
+            <h2>Waste of Time?</h2>
+            <h3>HTML Archive (2024)</h3>
+            <h3>Art 109 SJSU </h3>
+        </section>
+
+        <section class="project-documentation">
+            <p>
+                <a href="https://oliviajoyyy.github.io/project-1_cg/" target="_blank">
+                    Open project in new window</a>
+            </p>
+            <iframe id="time-archive-iframe" title="Waste of Time?" src="https://oliviajoyyy.github.io/project-1_cg/">
+            </iframe>
+        </section>
+
+        <section class="artist-statment">
+            <p>Project by Olivia Joy Cacdac and Alyssa Guardado</p>
+            <p>
+                Time is tricky, and people ask the following questions: I wish I had more time to work on this. Or is
+                the time going by so fast? In this archive, we take surveillance and reflect on the time we spent on two
+                popular social media apps, Instagram and TikTok. We looked at the data from our phone's screen time and
+                recorded it from August 27th through August 31st. This archive allows us to specifically look at how
+                much time we spent on the social media app that day, and reflect on how else we could have spent that
+                time. It brings attention to the problem of people feeling like they've wasted hours of their day
+                scrolling through various short videos on social media. We can replace our time with a more productive
+                way instead of using devices, such as grocery shopping, taking a power nap, watching a movie, cleaning
+                your room, folding laundry, and many more ways. These comparisons bring the screen time into
+                perspective. The database was collected by Alyssa Guardado and Olivia Joy Cacdac, who compared using
+                both apps daily. It shows two people using the apps more than others or less than others. We included a
+                date picker, radio buttons, and a text area in this archive to give viewers a space to record their own
+                time spent on a social media app and encourage them to think about what else could be done in that
+                amount of time. As a viewer, ask yourself this question. How much time are you giving away for free?
+            </p>
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>

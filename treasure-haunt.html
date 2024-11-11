@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Haunt | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amethysta&family=Cinzel:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="project-page">
+
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#f2f5f0">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></a></li>
+            <li><a href="index.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <ul>
+            <li></li>
+            <li class="hideOnMobile"><a href="index.html">Portfolio</a></li>
+            <li class="hideOnMobile"><a href="about.html">About</a></li>
+            <li class="hideOnMobile"><a href="resume.html">Resume</a></li>
+            <li class="hideOnMobile"><a href="#">Contact</a></li>
+            <li class="menu-icon" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="24px" viewBox="0 -960 960 960" width="24px" fill="#f2f5f0">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></a></li>
+        </ul>
+    </nav>
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar'); // gets the sidebar
+            sidebar.style.display = "flex";
+        }
+
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar'); // gets the sidebar
+            sidebar.style.display = "none";
+        }
+    </script>
+
+    <main class="content-wrapper-main">
+        <section class="project-details">
+            <h2>Treasure Haunt</h2>
+            <h3>p5.js Video Game (2023)</h3>
+            <h3>Art 75 SJSU </h3>
+        </section>
+
+        <section class="project-documentation">
+            <p>
+                <a href="https://oliviajoyyy.github.io/treasure_haunt/" target="_blank">
+                    Open project in new window</a>
+            </p>
+            <iframe id="treasure-haunt-iframe" title="Treasure Haunt"
+                src="https://oliviajoyyy.github.io/treasure_haunt/">
+            </iframe>
+            <p>
+                <a href="https://oliviajoyyy.github.io/art-101/p5_code/project1_oc-final/sketch.js">See sketch.js
+                    code</a>
+            </p>
+        </section>
+
+        <section class="artist-statment">
+            <p>
+                This was a game I designed and created using p5.js for my Art 75 final project.
+                The objective of the game is to collect certain treasures throughout the house. Use the W, A, S, D keys
+                to control the ghost character and move between rooms by heading toward the green squares. There are 5
+                levels. As the the levels progress, there are more items to collect and spiders to avoid. After running
+                into a spider three times during a level, you'll have to try again. I created this game in the way that
+                the ghost can move between rooms because I wanted to give players
+                the freedom to explore.
+            </p>
+            <p>
+                All background images are by <a href="https://www.freepik.com/author/upklyak">upklyak on Freepik</a>
+            </p>
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>

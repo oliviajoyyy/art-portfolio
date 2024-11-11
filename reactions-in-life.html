@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reactions in Life | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amethysta&family=Cinzel:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="project-page">
+
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#f2f5f0">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></a></li>
+            <li><a href="index.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <ul>
+            <li></li>
+            <li class="hideOnMobile"><a href="index.html">Portfolio</a></li>
+            <li class="hideOnMobile"><a href="about.html">About</a></li>
+            <li class="hideOnMobile"><a href="resume.html">Resume</a></li>
+            <li class="hideOnMobile"><a href="#">Contact</a></li>
+            <li class="menu-icon" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="24px" viewBox="0 -960 960 960" width="24px" fill="#f2f5f0">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></a></li>
+        </ul>
+    </nav>
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar'); // gets the sidebar
+            sidebar.style.display = "flex";
+        }
+
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar'); // gets the sidebar
+            sidebar.style.display = "none";
+        }
+    </script>
+
+    <main class="content-wrapper-main">
+        <section class="project-details">
+            <h2>Reactions in Life</h2>
+            <h3>Net Art (2024)</h3>
+            <h3>Art 109 SJSU </h3>
+        </section>
+
+        <section class="project-documentation">
+            <p>
+                <a href="https://oliviajoyyy.github.io/art109-project2/" target="_blank">
+                    Open project in new window</a>
+            </p>
+            <iframe id="reactions-netart-iframe" title="Reactions In Life"
+                src="https://oliviajoyyy.github.io/art109-project2/">
+            </iframe>
+        </section>
+
+        <section class="artist-statment">
+            <p>
+                This Net Art project was inspired by the quote “Life is 10% what happens to you and 90% how you react to
+                it”
+                stated by Charles R. Swindoll. My project is meant to convey this idea that unexpected situations and
+                ones that are out of our control may happen to us, but the way we react to it determines how we
+                experience life. We can experience life in a more positive way by making the best of an unfortunate
+                situation, rather than dwelling on the negatives. In my project, users are presented with 5 separate
+                scenarios, shown one at a time. Each scenario has two options the user can choose from, with one being
+                the positive reaction and the other being the negative reaction. There is a positivity indicator in the
+                background, represented by the smiley face image. Each time the user selects the positive reaction, the
+                smiley face image grows larger and the background color brightens. When the user selects the negative
+                reaction, the smiley face image decreases in size and the background color darkens. With this, my
+                project conveys the idea that with each positive reaction we have, our outlook on life gets brighter and
+                happiness grows. The quote is finally revealed to the user at the end to encourage them to reflect on
+                how they would react to situations in life.
+            </p>
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>

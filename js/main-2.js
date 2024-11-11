@@ -9,7 +9,7 @@ import * as THREE from 'three';
 let scene, camera, renderer;
 let cube, torus, torusKnot, particlesMesh;
 let geometries = [];
-let geoCount = 10;
+let geoCount = 40;
 let sceneContainer = document.querySelector("#main-scene");
 
 // ------------ Animation for showing name at the top ------------
@@ -38,13 +38,33 @@ function init() {
     sceneContainer.appendChild(renderer.domElement); // append to specific element
     renderer.setClearColor(new THREE.Color('#e3e6e0'), 1);
 
+    const light = new THREE.DirectionalLight(0xffffff, 3); // args white light, strength of light
+    light.position.set(-3, 4, 5);
+    scene.add(light);
+
+    // add directional light helper
+    const helper = new THREE.DirectionalLightHelper(light, 5);
+    scene.add(helper); // comment out to hide helper
+
     // add-ons
     // const controls = new OrbitControls(camera, renderer.domElement);
 
     let geoY = 5;
     for (let i=0; i<geoCount; i++) {
-        geoY = -(i*5) + 5;
-        createGeometry(geometries[i], 0, geoY);
+        // geoY = -(i*5) + 5;
+        let geoX = 0;
+        // alternate position of every other geometry
+        if (i % 3 == 0) {
+            geoX = 0;
+            geoY = 10 - i;
+        } else if (i % 3 == 1) {
+            geoX = -5;
+            geoY = 7 - i;
+        } else {
+            geoX = 5;
+            geoY = 7 - i;
+        }
+        createGeometry(geometries[i], geoX, geoY);
     }
 
 }
@@ -56,7 +76,7 @@ function animate() {
     let scrollY = window.scrollY;
     scrollY = window.scrollY / document.body.scrollHeight * 100; /* to get the percent scrolled */
     // console.log(scrollY);
-    camera.position.y = -scrollY * 0.3; /* - to move camera down, + to move camera up, * by larger # to move camera faster */
+    camera.position.y = -scrollY * 0.1; /* - to move camera down, + to move camera up, * by larger # to move camera faster */
 
     // animating the cube
     // cube.rotation.x += 0.005;
@@ -78,16 +98,23 @@ function animate() {
 }
 
 function createGeometry(obj, x, y) {
-    const geometry = new THREE.OctahedronGeometry(1, 0);
-    const material = new THREE.LineBasicMaterial( {
-        color: "#21282a",
-        linewidth: 2,
+    const geometry = new THREE.OctahedronGeometry(0.7, 0);
+    // const material = new THREE.LineBasicMaterial( {
+    //     color: "#21282a",
+    //     linewidth: 2,
+    // });
+    // obj = new THREE.Line(geometry, material);
+    const material = new THREE.MeshPhysicalMaterial( {
+        color: "#3f7b9d"
     });
-    obj = new THREE.Line(geometry, material);
+    obj = new THREE.Mesh(geometry, material);
     scene.add(obj);
     obj.position.x = x;
     obj.position.y = y;
+    // obj.position.z = -5;
     obj.rotation.x = Math.random(0, 1);
+
+
 }
 
 /* Add box geometry */
