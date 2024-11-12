@@ -8,6 +8,7 @@ import * as THREE from 'three';
 
 let scene, camera, renderer;
 let torus, particlesMesh;
+let torus2, torus3;
 
 function init() {
     scene = new THREE.Scene();
@@ -28,8 +29,8 @@ function init() {
     // const controls = new OrbitControls(camera, renderer.domElement);
 
     // torus geometry
-    const geometry = new THREE.TorusKnotGeometry(2, 0.5, 500, 40, 9, 3); //new THREE.TorusGeometry(.7, .2, 16, 100);
-    const texture = new THREE.TextureLoader().load('textures/checker.jpg');
+    const geometry = new THREE.TorusKnotGeometry(2.5, 1, 375, 200, 27, 1);
+    // const texture = new THREE.TextureLoader().load('textures/checker.jpg');
     const material = new THREE.PointsMaterial({
         size: 0.005,
         color: '#a4ddeb'
@@ -37,8 +38,22 @@ function init() {
 
     torus = new THREE.Points(geometry, material);
     scene.add(torus);
-    torus.position.z = -5;
+    torus.position.z = -7;
     // torus.position.x = -10;
+
+    // torus geometry
+    torus2 = new THREE.Points(geometry, material);
+    scene.add(torus2);
+    torus2.position.z = -15;
+    torus2.position.x = -15;
+    torus2.position.y = -5;
+
+    // torus geometry
+    torus3 = new THREE.Points(geometry, material);
+    scene.add(torus3);
+    torus3.position.z = -13;
+    torus3.position.x = 15;
+    torus3.position.y = 2;
 
     // particles geometry
     const particlesGeometry = new THREE.BufferGeometry;
@@ -101,6 +116,8 @@ function animate() {
     requestAnimationFrame(animate);
 
     torus.rotation.y += 0.01;
+    torus2.rotation.y += -0.01;
+    torus3.rotation.y += -0.01;
     // particlesMesh.rotation.y += 0.0007;
     particlesMesh.rotation.x += 0.0007; // particles look like they fall down
 

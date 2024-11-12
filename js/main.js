@@ -40,7 +40,7 @@ function init() {
     // const controls = new OrbitControls(camera, renderer.domElement);
 
     // torus geometry
-    const geometry = new THREE.TorusKnotGeometry(2, 0.5, 500, 40, 9, 3); //new THREE.TorusGeometry(.7, .2, 16, 100); 
+    const geometry = new THREE.TorusKnotGeometry(2.5, 1, 375, 200, 27, 1); //new THREE.TorusGeometry(.7, .2, 16, 100); 
     const texture = new THREE.TextureLoader().load('textures/checker.jpg');
     const material = new THREE.PointsMaterial({
         size: 0.005,

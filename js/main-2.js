@@ -69,7 +69,7 @@ function animate() {
 
 /* Create and add geometry objects */
 function createGeometry(obj, x, y) {
-    const geometry = new THREE.OctahedronGeometry(0.7, 0);
+    const geometry = new THREE.OctahedronGeometry(0.5, 0);
     const material = new THREE.MeshPhysicalMaterial( {
         color: "#3f7b9d"
     });
@@ -77,7 +77,6 @@ function createGeometry(obj, x, y) {
     scene.add(obj);
     obj.position.x = x;
     obj.position.y = y;
-    // obj.position.z = -5;
     obj.rotation.x = Math.random(0, 1);
 }
 

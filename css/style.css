@@ -216,7 +216,7 @@ nav li:first-child {
 .portfolio .container p {
     width: 40vw;
     line-height: 2;
-    text-align: left;
+    text-align: center;
     margin: 0;
 }
 
