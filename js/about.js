@@ -75,7 +75,7 @@ function animateParticles() {
     mouseY = event.clientY;
     mouseX = event.clientX;
     particlesMesh.rotation.x += (-0.001 - speed * 0.0001); // rotate so particles look like they move upward when mouse moves
-    console.log(speed);
+    // console.log(speed);
 }
 
 var prevEvent, currentEvent;
@@ -90,11 +90,11 @@ function calcMouseSpeed() {
         var movementY = Math.abs(currentEvent.screenY - prevEvent.screenY);
         var movement = Math.sqrt(movementX * movementX + movementY * movementY);
         speed = 10 * movement;//current speed
-        console.log('in if stmt ' + speed)
+        // console.log('in if stmt ' + speed)
     }
     prevEvent = currentEvent;
     prevSpeed = speed;
-    console.log(speed);
+    // console.log(speed);
 }
 
 function animate() {
@@ -102,14 +102,7 @@ function animate() {
 
     torus.rotation.y += 0.01;
     // particlesMesh.rotation.y += 0.0007;
-    //if (speed <= 0) {
     particlesMesh.rotation.x += 0.0007; // particles look like they fall down
-    //}
-
-    if (mouseX > 0) {
-        // particlesMesh.rotation.x = -mouseY * 0.0008;
-        // particlesMesh.rotation.y = mouseX * 0.0008;
-    }
 
     renderer.render(scene, camera);
 }
