@@ -232,6 +232,8 @@ nav li:first-child {
 .portfolio main {
     flex: 1 0 auto;
     color: #252930;
+    padding-top: 20px;
+    padding-bottom: 60px;
 }
 
 .portfolio main canvas {
@@ -274,7 +276,7 @@ nav li:first-child {
     width: 100%;
 }
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 830px) {
     .portfolio .project-section {
         /* background: rgb(30, 76, 107); */
         /*max-width: 75vw; /* width 75% of viewport width */
@@ -370,6 +372,22 @@ nav li:first-child {
     column-gap: 50px;
     row-gap: 50px;
     padding: 15px;
+}
+
+@media screen and (max-width: 870px) {
+    .project-grid-img {
+        position: relative;
+        z-index: 1;
+        max-width: 75vw; /* width 75% of viewport width */
+        margin: 0 auto; /* centers project-section on page */
+        justify-content: center; /* centers columns */
+        display: grid; /* content of project-section will be in grid */
+        grid-template-columns: repeat(1, 90%); /* 2 cols of 300px width */
+        grid-auto-rows: auto; /* rows will be 200px in height */
+        column-gap: 50px;
+        row-gap: 50px;
+        padding: 15px;
+    }
 }
 
 /* --------------- RESUME --------------- */
